@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
     public int determinant(int[][] array, int size) {
@@ -26,10 +26,15 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         Main deter = new Main();
-        int[][] matrix = new int[][] {{1, 2, 3, 4}, {6, 7, 9, 8}, {5, 0, 7, 3}, {2, 1, 0, 5}};
-        int[][] matrix2 = new int[][] {{5, -4}, {3, 2}};
-        int size = 4;
+        int size = scanner.nextInt();
+        int[][] matrix = new int[size][size];
+        for (int i = 0; i < size; i++){
+            for (int j = 0; j < size; j++){
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
         System.out.println(deter.determinant(matrix, size));
     }
 }
