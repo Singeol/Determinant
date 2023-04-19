@@ -32,15 +32,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Main deter = new Main();
+        System.out.print("Введите размер матрицы: ");
         int size = scanner.nextInt();  // Получение размера матрицы от пользователя
         int[][] matrix = new int[size][size];  // Создание двумерного массива для хранения матрицы
         // Заполнение матрицы
+        System.out.println("Введите элементы матрицы:");
         for (int i = 0; i < size; i++){
             for (int j = 0; j < size; j++){
                 matrix[i][j] = scanner.nextInt();
             }
         }
         // Вывод определителя матрицы
-        System.out.println(deter.determinant(matrix, size));
+        System.out.println("Определитель матрицы: " + deter.determinant(matrix, size));
     }
 }
